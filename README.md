@@ -22,6 +22,7 @@ pip install selenium
 
 #### 3. 运行程序
 
-运行`app.py`
+- 修改`config.py`中的`download_path`为电脑的下载文件夹地址，如`C:\User\Username\Downloads`
+- 运行`app.py`，按步骤安装插件并设置
 
 #### 4. 将`js`文件夹复制到专栏文件夹的同级目录
