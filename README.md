@@ -1,8 +1,8 @@
 # GitchatSave
 
-保存Gitchat专栏到本地
+保存Gitchat专栏到本地。需要开通大会员，并订阅好专栏
 
-使用selenium配合插件singleFile，保存成`html`到本地。将每一篇专栏的所有内容归置到用以文件夹下。
+使用selenium配合插件singleFile，保存成`html`到本地。将每一篇专栏的所有内容归置到同一个文件夹下。
 
 并修改了保存下来的`html`文件中的上一章、下一章的跳转链接，可以直接本地查看。
 
