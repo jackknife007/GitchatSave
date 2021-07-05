@@ -88,15 +88,14 @@ def get_columns_url(driver):
 
 
 if __name__ == "__main__":
-    my_driver = webdriver.Edge()
-    my_driver.get(config.column_url)
-    if config.download_path == "default":
-        input("请先修改config文件中的下载地址为电脑的download文件夹！")
-    else:
-        print("请完成以下步骤：")
-        print("\n".join(config.step_str))
-        input("完成后请输入任意字符继续....")
-        try:
+    with webdriver.Edge() as my_driver:
+        my_driver.get(config.column_url)
+        if config.download_path == "default":
+            input("请先修改config文件中的下载地址为电脑的download文件夹！（按Enter退出）")
+        else:
+            print("请完成以下步骤：")
+            print("\n".join(config.step_str))
+            input("完成后请输入任意字符继续....")
             while True:
                 single_url = input("请输入需要保存到本地的专栏的url(输入exit退出)：")
                 if single_url.lower() == "exit":
@@ -104,7 +103,5 @@ if __name__ == "__main__":
                 print("保存中....")
                 save_column(my_driver, single_url)
                 print("保存完成!")
-        finally:
-            my_driver.quit()
-        print("程序将在3秒后退出....")
-        time.sleep(3)
+        print("程序将在5秒后退出....")
+        time.sleep(5)
